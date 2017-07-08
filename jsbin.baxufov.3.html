@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by Szimonetta (http://jsbin.com/baxufov/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="színskála-2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+var blue=120;
+var green=79;
+var red=199;
+var size=50;
+
+
+for ( var w=0; w<=5; w++){
+  blue=blue+15
+  for ( var h=0; h<=5; h++) {
+  
+context.fillStyle = 'rgb('+red+','+green+','+blue+')';
+
+context.fillRect((size+10)*h,(size+10)*w,size,size);
+    red=red-7
+  }
+}
+
+</script>
+</body>
+</html>
